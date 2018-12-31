@@ -1,0 +1,6 @@
+framework module ZSSExtensions {
+  umbrella header "ZSSExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

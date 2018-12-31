@@ -1,6 +1,5 @@
 use_frameworks!
+platform :ios, '11.0'
 target 'ZSSExtensions_Tests' do
   pod 'ZSSExtensions', :path => '../'
-  
-  
 end

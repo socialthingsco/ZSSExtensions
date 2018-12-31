@@ -1,0 +1,16 @@
+PODS:
+  - ZSSExtensions (0.1.1)
+
+DEPENDENCIES:
+  - ZSSExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  ZSSExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZSSExtensions: 08b7da573639b82a0bdb956d347fdca7745fed2b
+
+PODFILE CHECKSUM: de97b7a9fec90b8804abd2170cc01c653e50cc1b
+
+COCOAPODS: 1.5.3
