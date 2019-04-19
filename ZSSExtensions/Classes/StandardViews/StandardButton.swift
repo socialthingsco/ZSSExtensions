@@ -10,6 +10,16 @@ import UIKit
 
 public class StandardButton: UIButton {
     
+    @IBInspectable public var extraTapPadding: CGFloat = 0
+    
+    override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        if extraTapPadding != 0 {
+            let biggerFrame = bounds.insetBy(dx: -extraTapPadding, dy: -extraTapPadding)
+            return biggerFrame.contains(point)
+        }
+        return super.point(inside: point, with: event)
+    }
+    
     @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
             layer.cornerRadius = cornerRadius
