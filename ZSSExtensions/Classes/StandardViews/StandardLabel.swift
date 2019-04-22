@@ -46,4 +46,33 @@ public class StandardLabel: UILabel {
         }
     }
     
+    @IBInspectable public var kerning: CGFloat = -1000.0 {
+        didSet {
+            guard kerning != -1000 else {
+                return
+            }
+            updateText(attribute: NSAttributedString.Key.kern, value: kerning)
+        }
+    }
+    
+    public override var text: String? {
+        didSet {
+            let kerning = self.kerning
+            self.kerning = kerning
+        }
+    }
+    
+    fileprivate func updateText(attribute: NSAttributedString.Key, value: Any) {
+        if let text = attributedText {
+            let attributedText = NSMutableAttributedString(attributedString: text.attributedSubstring(from: NSRange(location: 0, length: text.length)))
+            attributedText.addAttribute(attribute, value: value, range: NSRange(location: 0, length: text.length))
+            self.attributedText = attributedText
+        } else if let text = self.text {
+            let attributedText = NSAttributedString(string: text, attributes: [
+                attribute: value,
+                ]
+            )
+            self.attributedText = attributedText
+        }
+    }
 }

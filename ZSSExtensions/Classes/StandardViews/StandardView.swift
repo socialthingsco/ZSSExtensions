@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class StandardView: UIView {
+open class StandardView: UIView {
     
     @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
