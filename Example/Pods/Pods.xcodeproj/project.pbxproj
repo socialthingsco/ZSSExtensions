@@ -15,7 +15,7 @@
 		49DE7B42226E09BA0083F0A6 /* DeviceConstantButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE7B40226E09AD0083F0A6 /* DeviceConstantButton.swift */; };
 		49DE7B45226E0A7E0083F0A6 /* DeviceConstantsLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE7B43226E0A740083F0A6 /* DeviceConstantsLayoutConstraint.swift */; };
 		49DE7B48226E0A940083F0A6 /* DeviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE7B46226E0A900083F0A6 /* DeviceConstants.swift */; };
-		49DE7B4B226E0AC40083F0A6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE7B3A226E08630083F0A6 /* Reachability.swift */; };
+		49DE7B4D226E0E7A0083F0A6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE7B4C226E0E790083F0A6 /* Reachability.swift */; };
 		4A28BAC02209EBCE000C67F5 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28BABF2209EBCE000C67F5 /* HapticFeedback.swift */; };
 		4A28BAC52209EC26000C67F5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28BAC22209EC26000C67F5 /* UIViewController+Extensions.swift */; };
 		4A28BAC82209EC3C000C67F5 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28BAC72209EC3C000C67F5 /* UINavigationController+Extensions.swift */; };
@@ -63,11 +63,11 @@
 		400C38963A176C0C8C64E027B0D26F2D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44753531367C62638E8E996B1F22B5C7 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extensions.swift"; path = "ZSSExtensions/Classes/UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		44E088EC6A0171DA6F5E49116F53FC9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49DE7B3A226E08630083F0A6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		49DE7B3D226E08B50083F0A6 /* DeviceConstantLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstantLabel.swift; sourceTree = "<group>"; };
 		49DE7B40226E09AD0083F0A6 /* DeviceConstantButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstantButton.swift; sourceTree = "<group>"; };
 		49DE7B43226E0A740083F0A6 /* DeviceConstantsLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstantsLayoutConstraint.swift; sourceTree = "<group>"; };
 		49DE7B46226E0A900083F0A6 /* DeviceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstants.swift; sourceTree = "<group>"; };
+		49DE7B4C226E0E790083F0A6 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		4A28BABF2209EBCE000C67F5 /* HapticFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HapticFeedback.swift; path = ZSSExtensions/Classes/HapticFeedback.swift; sourceTree = "<group>"; };
 		4A28BAC22209EC26000C67F5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "ZSSExtensions/Classes/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4A28BAC72209EC3C000C67F5 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "ZSSExtensions/Classes/UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 		389CFA0D1084C715946AD2E340B92E72 /* ZSSExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				49DE7B4C226E0E790083F0A6 /* Reachability.swift */,
 				4A28BABF2209EBCE000C67F5 /* HapticFeedback.swift */,
 				3A692C05824C919D52FC2BAA6144816F /* Array+Extensions.swift */,
 				7CB5536CD8EDDA606B8C22A1074C007E /* CALayer+Extensions.swift */,
@@ -144,7 +145,6 @@
 				052FEBB0D52BE8998AD605F9B3B19D8F /* UITableView+Extensions.swift */,
 				4A28BAC22209EC26000C67F5 /* UIViewController+Extensions.swift */,
 				4A28BAC72209EC3C000C67F5 /* UINavigationController+Extensions.swift */,
-				49DE7B3A226E08630083F0A6 /* Reachability.swift */,
 				49DE7B43226E0A740083F0A6 /* DeviceConstantsLayoutConstraint.swift */,
 				49DE7B46226E0A900083F0A6 /* DeviceConstants.swift */,
 				5E946221379A6172707D63ED95EDFAFF /* Pod */,
@@ -369,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DE7B4D226E0E7A0083F0A6 /* Reachability.swift in Sources */,
 				CE84D61852D5758152992B657E0BBC12 /* Pods-ZSSExtensions_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +396,6 @@
 				49DE7B48226E0A940083F0A6 /* DeviceConstants.swift in Sources */,
 				742F78DB4438BA0831B29B35CB25B65C /* UINib+Extensions.swift in Sources */,
 				49DE7B3F226E09500083F0A6 /* DeviceConstantLabel.swift in Sources */,
-				49DE7B4B226E0AC40083F0A6 /* Reachability.swift in Sources */,
 				4A28BAC02209EBCE000C67F5 /* HapticFeedback.swift in Sources */,
 				FEE9EEEC7016556EDB980E9897ACAF0A /* UITableView+Extensions.swift in Sources */,
 				B83E6400D7ABB4D7B2120260F06E2FE7 /* ZSSExtensions-dummy.m in Sources */,
