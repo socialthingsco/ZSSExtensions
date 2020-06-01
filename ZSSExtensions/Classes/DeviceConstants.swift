@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import DeviceKit
 
 public struct DeviceConstants {
     
@@ -19,36 +20,25 @@ public struct DeviceConstants {
         self.large = large
     }
     
-    
-    
-    public var forCurrentDevice: CGFloat {
-        switch UIDevice.current.screenType {
-        case .iPhone_XR, .iPhone_XSMax, .iPhones_X_XS, .iPhones_6Plus_6sPlus_7Plus_8Plus:
-            return large
-        case .iPhones_6_6s_7_8:
-            return medium
-        case .iPhones_5_5s_5c_SE, .iPhones_4_4S:
-            return small
-        default:
-            return large
-        }
-    }
-    
-    
     public enum Size {
         case small, medium, large
     }
     
     public static var currentSize: Size {
-        switch UIDevice.current.screenType {
-        case .iPhone_XR, .iPhone_XSMax, .iPhones_X_XS, .iPhones_6Plus_6sPlus_7Plus_8Plus:
-            return Size.large
-        case .iPhones_6_6s_7_8:
-            return Size.medium
-        case .iPhones_5_5s_5c_SE, .iPhones_4_4S:
-            return Size.small
+        if Device.current.isPad {
+            return .small
+        }
+
+        switch Device.current.realDevice {
+
+        case .iPhoneSE, .iPhone4, .iPhone4s, .iPhone5, .iPhone5c, .iPhone5s, .iPhone6, .iPhone6s, .iPhone7, .iPhone8:
+            return .small
+        case .iPhone6Plus, .iPhone7Plus, .iPhone8Plus, .iPhoneX, .iPhoneXR, .iPhoneXS, .iPhone11, .iPhone11Pro:
+            return .medium
+        case .iPhoneXSMax, .iPhone11ProMax:
+            return .large
         default:
-            return Size.large
+            return .medium
         }
     }
 }

@@ -38,5 +38,28 @@ public class StandardButton: UIButton {
         }
     }
     
+    @IBInspectable public var shadowColor: UIColor? {
+        didSet {
+            layer.shadowColor = shadowColor?.cgColor
+        }
+    }
+    
+    @IBInspectable public var shadowOffset: CGSize = .zero {
+        didSet {
+            layer.shadowOffset = shadowOffset
+        }
+    }
+    
+    @IBInspectable public var shadowRadius: CGFloat = 0.0 {
+        didSet {
+            layer.shadowRadius = shadowRadius
+        }
+    }
+    
+    @IBInspectable public var shadowOpacity: Float = 0.0 {
+        didSet {
+            layer.shadowOpacity = shadowOpacity
+        }
+    }
 }
 
