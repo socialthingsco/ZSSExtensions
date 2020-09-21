@@ -10,7 +10,7 @@ import UIKit
 
 public extension Date {
     
-    public func sameWeek(_ date: Date) -> Bool {
+    func sameWeek(_ date: Date) -> Bool {
         let calendar = Calendar.current
         let sameWeek = (calendar as NSCalendar).compare(self , to: date, toUnitGranularity: NSCalendar.Unit.weekOfYear) == .orderedSame
         let formatter = DateFormatter()
@@ -18,7 +18,7 @@ public extension Date {
         return sameWeek
     }
     
-    public func isBetween(_ startRangeDate: Date, endRangeDate: Date) -> Bool {
+    func isBetween(_ startRangeDate: Date, endRangeDate: Date) -> Bool {
         var result : Bool = false
         if ((self.compare(startRangeDate) == ComparisonResult.orderedDescending) || (self.compare(startRangeDate) == ComparisonResult.orderedSame)) && self.compare(endRangeDate) == ComparisonResult.orderedAscending {
             result = true
@@ -29,15 +29,15 @@ public extension Date {
         return result
     }
 
-    public static func <(a: Date, b: Date) -> Bool {
+    static func <(a: Date, b: Date) -> Bool {
         return a.compare(b ) == ComparisonResult.orderedAscending
     }
     
-    public static func ==(a: Date, b: Date) -> Bool {
+    static func ==(a: Date, b: Date) -> Bool {
         return a.compare(b ) == ComparisonResult.orderedSame
     }
 
-    public func timeAgo(_ numericDates:Bool = true) -> String {
+    func timeAgo(_ numericDates:Bool = true) -> String {
         
         let calendar = Calendar.current
         let now = Date()
@@ -98,6 +98,5 @@ public extension Date {
         } else {
             return "Just now"
         }
-        
     }
 }

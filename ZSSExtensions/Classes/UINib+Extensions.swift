@@ -9,15 +9,13 @@
 import UIKit
 
 public extension UINib {
-    
-    public convenience init?(potentialName name: String, bundle: Bundle = Bundle.main) {
+    convenience init?(potentialName name: String, bundle: Bundle = Bundle.main) {
         guard UINib.exists(nibName: name, bundle: bundle) else { return nil }
         self.init(nibName: name, bundle: bundle)
     }
     
-    public static func exists(nibName name: String, bundle: Bundle = Bundle.main) -> Bool {
+    static func exists(nibName name: String, bundle: Bundle = Bundle.main) -> Bool {
         return bundle.path(forResource: name, ofType:"nib") != nil
     }
-    
 }
 

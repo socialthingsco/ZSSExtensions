@@ -1,23 +1,29 @@
 {
   "name": "ZSSExtensions",
-  "version": "0.1.1",
-  "summary": "A short description of ZSSExtensions.",
+  "version": "0.3.0",
+  "summary": "Extensions and commonly used pieces of code to share across various projects.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/ZSSExtensions",
+  "homepage": "https://github.com/socialthingco/ZSSExtensions",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Zachary Shakked": "zshakked@stevens.edu"
+    "Zachary Shakked": "zach@shakd.io"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/ZSSExtensions.git",
-    "tag": "0.1.1"
+    "git": "https://github.com/socialthingsco/ZSSExtensions.git",
+    "tag": "0.3.0"
   },
   "platforms": {
-    "ios": "11.0"
+    "ios": "13.0"
   },
   "source_files": "ZSSExtensions/Classes/**/*",
-  "swift_version": "4.2"
+  "swift_versions": "5.0",
+  "dependencies": {
+    "DeviceKit": [
+
+    ]
+  },
+  "swift_version": "5.0"
 }

@@ -1,16 +1,23 @@
 PODS:
-  - ZSSExtensions (0.1.1)
+  - DeviceKit (2.3.0)
+  - ZSSExtensions (0.3.0):
+    - DeviceKit
 
 DEPENDENCIES:
   - ZSSExtensions (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - DeviceKit
 
 EXTERNAL SOURCES:
   ZSSExtensions:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZSSExtensions: 08b7da573639b82a0bdb956d347fdca7745fed2b
+  DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
+  ZSSExtensions: 5864724ceb88fd263ce4538104880a8b6f0b3cb6
 
-PODFILE CHECKSUM: de97b7a9fec90b8804abd2170cc01c653e50cc1b
+PODFILE CHECKSUM: 1d807d3b37a3a162ffdfedcb72d158f7d7e7a750
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

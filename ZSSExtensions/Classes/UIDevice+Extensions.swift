@@ -10,10 +10,7 @@ import UIKit
 import DeviceKit
 
 public extension UIDevice {
-        
-    public static var modelName: String {
+    static var modelName: String {
         return Device.current.model ?? ""
     }
-    
-    
 }

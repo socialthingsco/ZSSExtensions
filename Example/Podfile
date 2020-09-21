@@ -1,5 +1,6 @@
 use_frameworks!
-platform :ios, '11.0'
+inhibit_all_warnings!
+platform :ios, '13.0'
 target 'ZSSExtensions_Tests' do
   pod 'ZSSExtensions', :path => '../'
 end

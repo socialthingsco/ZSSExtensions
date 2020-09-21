@@ -9,12 +9,12 @@
 import UIKit
 
 public extension Array {
-    public subscript(safe index: Int) -> Element? {
+    subscript(safe index: Int) -> Element? {
         guard index < count else { return nil }
         return self[index]
     }
     
-    public subscript (safe subRange: Range<Int>) -> ArraySlice<Element> {
+    subscript (safe subRange: Range<Int>) -> ArraySlice<Element> {
         let from = startIndex.advanced(by: subRange.lowerBound) > 0 ? startIndex.advanced(by: subRange.lowerBound) : 0
         let to = subRange.upperBound > count - 1 ? count - 1 : subRange.upperBound
         
@@ -23,7 +23,7 @@ public extension Array {
         return self[from ..< to]
     }
     
-    public func takeFirst(_ elementCount: Int) -> Array {
+    func takeFirst(_ elementCount: Int) -> Array {
         var elementCount = elementCount
         if (elementCount > count) {
             elementCount = count
@@ -31,7 +31,7 @@ public extension Array {
         return Array(self[0..<elementCount])
     }
     
-    public func takeLast(_ elementCount: Int) -> Array {
+    func takeLast(_ elementCount: Int) -> Array {
         var elementCount = elementCount
         if (elementCount > count) {
             elementCount = count
@@ -39,7 +39,7 @@ public extension Array {
         return Array(self[(count - elementCount)..<count])
     }
     
-    public func takeRandom(_ elementCount: Int) -> Array {
+    func takeRandom(_ elementCount: Int) -> Array {
         guard elementCount > 0 else {
             return self
         }
@@ -53,7 +53,4 @@ public extension Array {
         
         return randomElements
     }
-    
-    
-    
 }

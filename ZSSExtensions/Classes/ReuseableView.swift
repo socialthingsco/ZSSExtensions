@@ -18,7 +18,7 @@ public extension ReusableView where Self: UIView {
     // 1. The cell is a subclass of another ReusableView
     // 2. The nib name is different from the class name
     
-    public static var reuseIdentifier: String {
+    static var reuseIdentifier: String {
         return String(describing: Self.self)
     }
 }

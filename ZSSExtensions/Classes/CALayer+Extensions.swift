@@ -9,7 +9,7 @@
 import UIKit
 
 public extension CALayer {
-    public var borderUIColor : UIColor {
+    var borderUIColor : UIColor {
         set {
             borderColor = newValue.cgColor
         }
@@ -18,7 +18,7 @@ public extension CALayer {
         }
     }
     
-    public var shadowUIColor : UIColor {
+    var shadowUIColor : UIColor {
         set {
             shadowColor = newValue.cgColor
         }

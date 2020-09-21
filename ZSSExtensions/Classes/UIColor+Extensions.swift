@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIColor {
-    public convenience init(rgba: String) {
+    convenience init(rgba: String) {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue:  CGFloat = 0.0
@@ -51,7 +51,7 @@ public extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
     
-    public func as1ptImage() -> UIImage {
+    func as1ptImage() -> UIImage {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         let ctx = UIGraphicsGetCurrentContext()!
         self.setFill()
