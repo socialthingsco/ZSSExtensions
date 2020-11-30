@@ -1,13 +1,19 @@
 //
-//  File.swift
+//  Constraint.swift
 //  ZSSExtensions
 //
 //  Created by Ethan.L on 11/21/20.
+//  Copyright © 2016 Zachary Shakked. All rights reserved.
 //
 
 import UIKit
 
 class Constraint {
+
+    /// Note: This class is designed
+    /// to make dynamic layout arrangement easy and
+    /// to optimize NSLayoutConstraint related template generating code amount
+
     static func activate(_ constraints: [NSLayoutConstraint]...) {
         for constraints in constraints {
             NSLayoutConstraint.activate(constraints)
