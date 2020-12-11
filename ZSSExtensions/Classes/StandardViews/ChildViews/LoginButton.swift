@@ -27,20 +27,17 @@ public class LoginButton: UIButton, FormButton {
 
     private let loader = UIActivityIndicatorView(style: .medium)
 
-    @objc func onTouchDown() {
-        render(style: style, isTouching: true)
-    }
-
-    @objc func onTouchEnd() {
-        render(style: style, isTouching: false)
-    }
-
     private var isLightBackground = false
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(frame: .zero)
+        self.setup()
+    }
 
     public init(frame: CGRect = .zero, text: String = "Button", height: CGFloat = 50, isLightBackground: Bool = false) {
         super.init(frame: frame)
+        self.setTitle(text, for: .normal)
         self.configure(height: height, isLightBackground: isLightBackground)
-        setTitle(text, for: .normal)
         self.setup()
     }
 
@@ -50,20 +47,14 @@ public class LoginButton: UIButton, FormButton {
     }
 
     func setup () {
-        titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
         translatesAutoresizingMaskIntoConstraints = false
-
         loader.translatesAutoresizingMaskIntoConstraints = false
         addSubview(loader)
+
         Constraint.activate(
             Constraint.equalCenterX(self, loader),
             Constraint.equalCenterY(self, loader)
         )
-
-        layer.borderWidth = 1
-        layer.cornerRadius = 8
-        layer.backgroundColor = self.mainColor.cgColor
 
         render(style: style)
 
@@ -80,26 +71,22 @@ public class LoginButton: UIButton, FormButton {
         self.alpha = alpha
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(frame: .zero)
-        heightAnchor.constraint(equalToConstant: 50).isActive = true
-        self.setup()
-    }
-
     func render(style: ButtonStyle, isTouching: Bool = false, isLoading: Bool = false) {
+        layer.backgroundColor = self.mainColor.cgColor
+
         isEnabled = style != .disabled && !isLoading
         switch style {
         case .yellow:
             loader.color = .white
             if isTouching {
-                setButtonStyle(textColor: .white, backgroundColor: .brown, borderColor: .brown)
+                setButtonStyle(textColor: .white, backgroundColor: .brown, borderColor: .brown, alpha: 1.0)
             } else {
-                setButtonStyle(textColor: .white, backgroundColor: self.mainColor, borderColor: self.mainColor)
+                setButtonStyle(textColor: .white, backgroundColor: self.mainColor, borderColor: self.mainColor, alpha: 1.0)
             }
         case .disabled:
             loader.color = .white
-            setButtonStyle(textColor: isLightBackground ? .darkGray : .white, backgroundColor: .lightGray,
-                           borderColor: isLightBackground ? .darkGray : .white, alpha: 0.5)
+            setButtonStyle(textColor: isLightBackground ? .darkGray : .white, backgroundColor: self.mainColor,
+                           borderColor: isLightBackground ? self.mainColor : .white, alpha: 0.5)
         case .ghost:
             loader.color = .white
             if isTouching {
@@ -138,6 +125,14 @@ public class LoginButton: UIButton, FormButton {
             titleLabel?.alpha = 1
             loader.stopAnimating()
         }
+    }
+
+    @objc func onTouchDown() {
+        render(style: style, isTouching: true)
+    }
+
+    @objc func onTouchEnd() {
+        render(style: style, isTouching: false)
     }
 
     // FormButton
