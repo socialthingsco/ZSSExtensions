@@ -9,6 +9,12 @@
 import UIKit
 
 public extension UIColor {
+
+    static var shakdMarigold: UIColor { return UIColor.init(rgba: "#fec705") }
+    static var shakdStrongPink: UIColor { return UIColor.init(rgba: "#ff1877") }
+    static var shakdSoftBlue: UIColor { return UIColor.init(rgba: "#5f70ed") }
+    static var shakdDarkBlueGrey: UIColor { return UIColor.init(rgba: "#332255") }
+
     convenience init(rgba: String) {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0

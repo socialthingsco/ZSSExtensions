@@ -1,26 +1,32 @@
 //
-//  File.swift
+//  Constraint.swift
 //  ZSSExtensions
 //
 //  Created by Ethan.L on 11/21/20.
+//  Copyright © 2016 Zachary Shakked. All rights reserved.
 //
 
 import UIKit
 
-class Constraint {
-    static func activate(_ constraints: [NSLayoutConstraint]...) {
+public class Constraint {
+
+    /// Note: This class is designed
+    /// to make dynamic layout arrangement easy and
+    /// to optimize NSLayoutConstraint related template generating code amount
+
+    public static func activate(_ constraints: [NSLayoutConstraint]...) {
         for constraints in constraints {
             NSLayoutConstraint.activate(constraints)
         }
     }
 
-    static func activate(_ constraints: [[NSLayoutConstraint]]) {
+    public static func activate(_ constraints: [[NSLayoutConstraint]]) {
         for constraints in constraints {
             NSLayoutConstraint.activate(constraints)
         }
     }
 
-    static func pin(_ view: UIView, to toView: UIView, top: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil, right: CGFloat? = nil) -> [NSLayoutConstraint] {
+    public static func pin(_ view: UIView, to toView: UIView, top: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil, right: CGFloat? = nil) -> [NSLayoutConstraint] {
         var constraints = [NSLayoutConstraint]()
         if let top = top {
             constraints.append(view.topAnchor.constraint(equalTo: toView.topAnchor, constant: top))
@@ -37,7 +43,7 @@ class Constraint {
         return constraints
     }
 
-    static func rows(_ views: [UIView], spacing: [CGFloat]) -> [NSLayoutConstraint] {
+    public static func rows(_ views: [UIView], spacing: [CGFloat]) -> [NSLayoutConstraint] {
         guard views.count > 1 else { return [NSLayoutConstraint]() }
         var currentSpacing = spacing[safe: 0] ?? 0
         var constraints = [NSLayoutConstraint]()
@@ -50,7 +56,7 @@ class Constraint {
         return constraints
     }
 
-    static func columns(_ views: [UIView], spacing: [CGFloat]) -> [NSLayoutConstraint] {
+    public static func columns(_ views: [UIView], spacing: [CGFloat]) -> [NSLayoutConstraint] {
         guard views.count > 1 else { return [NSLayoutConstraint]() }
         var currentSpacing = spacing[safe: 0] ?? 0
         var constraints = [NSLayoutConstraint]()
@@ -63,7 +69,7 @@ class Constraint {
         return constraints
     }
 
-    static func equalCenterX(_ views: UIView...) -> [NSLayoutConstraint] {
+    public static func equalCenterX(_ views: UIView...) -> [NSLayoutConstraint] {
         return equalCenterX(views)
     }
 
@@ -74,11 +80,11 @@ class Constraint {
         }
     }
 
-    static func equalCenterY(_ views: UIView...) -> [NSLayoutConstraint] {
+    public static func equalCenterY(_ views: UIView...) -> [NSLayoutConstraint] {
         return equalCenterY(views)
     }
 
-    static func equalWidths(_ views: UIView...) -> [NSLayoutConstraint] {
+    public static func equalWidths(_ views: UIView...) -> [NSLayoutConstraint] {
         return equalWidths(views)
     }
 
@@ -89,21 +95,21 @@ class Constraint {
         }
     }
 
-    static func equalLeftAnchor(_ views: [UIView]) -> [NSLayoutConstraint] {
+    public static func equalLeftAnchor(_ views: [UIView]) -> [NSLayoutConstraint] {
         guard let v = views.first else { return [NSLayoutConstraint]() }
         return views.suffix(from: 1).map {
             return $0.leftAnchor.constraint(equalTo: v.leftAnchor)
         }
     }
 
-    static func equalRightAnchor(_ views: [UIView]) -> [NSLayoutConstraint] {
+    public static func equalRightAnchor(_ views: [UIView]) -> [NSLayoutConstraint] {
         guard let v = views.first else { return [NSLayoutConstraint]() }
         return views.suffix(from: 1).map {
             return $0.rightAnchor.constraint(equalTo: v.rightAnchor)
         }
     }
 
-    static func equalTopAnchor(_ views: [UIView]) -> [NSLayoutConstraint] {
+    public static func equalTopAnchor(_ views: [UIView]) -> [NSLayoutConstraint] {
         guard let v = views.first else { return [NSLayoutConstraint]() }
         return views.suffix(from: 1).map {
             return $0.topAnchor.constraint(equalTo: v.topAnchor)
@@ -117,14 +123,14 @@ class Constraint {
         }
     }
 
-    static func equalHeights(_ views: [UIView]) -> [NSLayoutConstraint] {
+    public static func equalHeights(_ views: [UIView]) -> [NSLayoutConstraint] {
         guard let v = views.first else { return [NSLayoutConstraint]() }
         return views.suffix(from: 1).map {
             return $0.heightAnchor.constraint(equalTo: v.heightAnchor)
         }
     }
 
-    static func size(_ view: UIView, height: CGFloat? = nil, width: CGFloat? = nil) -> [NSLayoutConstraint] {
+    public static func size(_ view: UIView, height: CGFloat? = nil, width: CGFloat? = nil) -> [NSLayoutConstraint] {
         return [
             height == nil ? nil : view.heightAnchor.constraint(equalToConstant: height!),
             width == nil ? nil : view.widthAnchor.constraint(equalToConstant: width!)
