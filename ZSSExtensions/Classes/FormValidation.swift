@@ -41,6 +41,46 @@ public struct FormValidation {
         return nil
     }
 
+    static public func isProbablyAName (_ value: Any?) -> String? {
+        if let string = value as? String, string != "" {
+            let nameRegEx =  "/^[a-zA-Z '.-]*$/"
+            let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
+            if !nameTest.evaluate(with: string) {
+                return "Invalid name"
+            }
+        }
+        return nil
+    }
+
+    static public func isValidPassowrd (_ value: Any?) -> String? {
+        /** password validation regex
+         Minimum 8 characters at least 1 Alphabet and 1 Number:
+         "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+
+         Minimum 8 characters at least 1 Alphabet, 1 Number and 1 Special Character:
+         "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$"
+
+         Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet and 1 Number:
+         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
+
+         Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character:
+         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[d$@$!%*?&#])[A-Za-z\\dd$@$!%*?&#]{8,}"
+
+         Minimum 8 and Maximum 10 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character:
+         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&#])[A-Za-z\\d$@$!%*?&#]{8,10}"
+        */
+
+        if let string = value as? String, string != "" {
+            /// Minimum 8 characters at least 1 Alphabet and 1 Number
+            let passwordRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+            let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+            if !passwordTest.evaluate(with: string) {
+                return "Invalid password"
+            }
+        }
+        return nil
+    }
+
     static func minimumLength (length: Int) -> FormFieldValidation {
         return { value in
             if let string = value as? String,
