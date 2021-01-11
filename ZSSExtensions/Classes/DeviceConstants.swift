@@ -33,9 +33,9 @@ public struct DeviceConstants {
 
         case .iPhoneSE, .iPhone4, .iPhone4s, .iPhone5, .iPhone5c, .iPhone5s, .iPhone6, .iPhone6s, .iPhone7, .iPhone8:
             return .small
-        case .iPhone6Plus, .iPhone7Plus, .iPhone8Plus, .iPhoneX, .iPhoneXR, .iPhoneXS, .iPhone11, .iPhone11Pro:
+        case .iPhone6Plus, .iPhone7Plus, .iPhone8Plus, .iPhoneX, .iPhoneXR, .iPhoneXS, .iPhone11, .iPhone11Pro, .iPhone12, .iPhone12Pro, .iPhone12Mini:
             return .medium
-        case .iPhoneXSMax, .iPhone11ProMax:
+        case .iPhoneXSMax, .iPhone11ProMax, .iPhone12ProMax:
             return .large
         default:
             return .medium
