@@ -22,7 +22,7 @@
   "swift_versions": "5.0",
   "dependencies": {
     "DeviceKit": [
-      "~> 4.2.1"
+      "~> 4.5.2"
     ]
   },
   "swift_version": "5.0"

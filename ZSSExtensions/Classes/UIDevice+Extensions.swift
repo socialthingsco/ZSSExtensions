@@ -11,6 +11,6 @@ import DeviceKit
 
 public extension UIDevice {
     static var modelName: String {
-        return Device.current.model ?? ""
+        return Device.current.description
     }
 }
