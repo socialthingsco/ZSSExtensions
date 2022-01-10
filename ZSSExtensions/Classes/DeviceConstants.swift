@@ -31,7 +31,7 @@ public struct DeviceConstants {
 
         switch Device.current.realDevice {
 
-        case .iPhoneSE, .iPhone4, .iPhone4s, .iPhone5, .iPhone5c, .iPhone5s, .iPhone6, .iPhone6s, .iPhone7, .iPhone8, .iPhoneSE2,:
+        case .iPhoneSE, .iPhone4, .iPhone4s, .iPhone5, .iPhone5c, .iPhone5s, .iPhone6, .iPhone6s, .iPhone7, .iPhone8, .iPhoneSE2:
             return .small
         case .iPhone6Plus, .iPhone7Plus, .iPhone8Plus, .iPhoneX, .iPhoneXR, .iPhoneXS, .iPhone11, .iPhone11Pro, .iPhone12, .iPhone12Pro, .iPhone12Mini, .iPhone13, .iPhone13Pro:
             return .medium
