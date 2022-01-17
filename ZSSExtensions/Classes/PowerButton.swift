@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class PowerButton: UIButton {
+open class PowerButton: UIButton {
     @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
             layer.cornerRadius = cornerRadius
