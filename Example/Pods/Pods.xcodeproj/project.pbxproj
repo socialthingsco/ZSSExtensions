@@ -15,6 +15,7 @@
 		21BD78F9DB9EA8FE167E4A9149CFCBA3 /* Pods-ZSSExtensions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5419D2B9AF2CEDE9A2569AEF6215C854 /* Pods-ZSSExtensions_Tests-dummy.m */; };
 		44FDC841C20165E2DE68E31737A401DC /* DeviceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3999B5917D2FE6E6B28DF178B6E1965 /* DeviceKit-dummy.m */; };
 		45294DD3646C1F7723E940B54CF084CD /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8F60C9408BAF6A95A60B766542991 /* NSDate+Extensions.swift */; };
+		4AF2A4332795DBF200818F2F /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2A4322795DBF200818F2F /* PowerButton.swift */; };
 		4E9D706FF89862295EE055CCD0C72705 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C619C4E4C9B98F54DC66E04989228B97 /* UIDevice+Extensions.swift */; };
 		5BFC68C16CD61B0917D1760327171D79 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0299318DFE0AF8A9DBD98E3856FD61B /* Constraint.swift */; };
 		64C94E678B127F603DF67FE95A8D0273 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -79,7 +80,7 @@
 		0E8649CDF15B0AEADC17F9D37EF3CA7C /* StandardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardView.swift; sourceTree = "<group>"; };
 		14A33F6E08BDC27A1AE9049076DDE832 /* DeviceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-umbrella.h"; sourceTree = "<group>"; };
 		164B0828B68A25908324230417AE8CB8 /* Pods-ZSSExtensions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZSSExtensions_Tests-umbrella.h"; sourceTree = "<group>"; };
-		18CD7DE58E9B08490F689A15B662B81A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		18CD7DE58E9B08490F689A15B662B81A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		190D7383CCEFD8AB3F8CB93098A3F214 /* DeviceKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeviceKit; path = DeviceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D836E509C3189D91A8170E99FD2819 /* ZSSExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZSSExtensions.release.xcconfig; sourceTree = "<group>"; };
 		2887ECE9C48F0B694300B69D641C99D0 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Extensions.swift"; path = "ZSSExtensions/Classes/UITextField+Extensions.swift"; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		498A370A9431E2ECBE0A1F847A050905 /* StandardImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardImageView.swift; sourceTree = "<group>"; };
 		49AC3E1DEF384EB96E0A2A568D96E819 /* DeviceConstantLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceConstantLabel.swift; sourceTree = "<group>"; };
 		49AC80F5DA1731231E6B37F2DA61C50F /* Pods-ZSSExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZSSExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4AF2A4322795DBF200818F2F /* PowerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		5419D2B9AF2CEDE9A2569AEF6215C854 /* Pods-ZSSExtensions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZSSExtensions_Tests-dummy.m"; sourceTree = "<group>"; };
 		69C62C6D84347018CF40935F289CBBA3 /* StandardButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		69F2371D66D76585BB50E9A1302569F0 /* UINib+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+Extensions.swift"; path = "ZSSExtensions/Classes/UINib+Extensions.swift"; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 		981E6416BD09D9E4B235C309EE3CC7F9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "ZSSExtensions/Classes/UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9830BECD1D6FCBD6EA322D0385C84B55 /* DeviceConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceConstants.swift; path = ZSSExtensions/Classes/DeviceConstants.swift; sourceTree = "<group>"; };
 		9CAFBD5E17BFC36A68716C2D75AF6BAE /* Pods-ZSSExtensions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZSSExtensions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5348B885476F3C3D6C8AFCCEC3675A6 /* DeviceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-prefix.pch"; sourceTree = "<group>"; };
 		A591DE7987361A31C55405D9FAAA7491 /* ZSSExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZSSExtensions-Info.plist"; sourceTree = "<group>"; };
 		AE2651A4198419E1CF90F9709DBBE23E /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "ZSSExtensions/Classes/UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -118,7 +120,7 @@
 		BF89629624AC543591433472EA5E528E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extensions.swift"; path = "ZSSExtensions/Classes/UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		C0299318DFE0AF8A9DBD98E3856FD61B /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = ZSSExtensions/Classes/Constraint.swift; sourceTree = "<group>"; };
 		C30E761534E206517BCB79A264ABA34F /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ZSSExtensions/Classes/Reachability.swift; sourceTree = "<group>"; };
-		C39AE53F31A8EBDD04B3A36B84BD46A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C39AE53F31A8EBDD04B3A36B84BD46A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4255AB3F534AD175F53571AF21E07CE /* ZSSExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZSSExtensions.debug.xcconfig; sourceTree = "<group>"; };
 		C619C4E4C9B98F54DC66E04989228B97 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "ZSSExtensions/Classes/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		CA830926B9FC8E473E97E380A5E88392 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Extensions.swift"; path = "ZSSExtensions/Classes/UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 		F7274719FAE2990DC2AB8E6D21969BB7 /* DeviceKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceKit.release.xcconfig; sourceTree = "<group>"; };
 		F7FFCB1C4639866CCD49715C063B811E /* UILabel+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Extensions.swift"; path = "ZSSExtensions/Classes/UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		FCE4B72ABB64B65516CAA54805E09E8A /* ZSSExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZSSExtensions.modulemap; sourceTree = "<group>"; };
-		FDDDE43ECE0DAF9C2DC22D853AA30F3E /* ZSSExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZSSExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FDDDE43ECE0DAF9C2DC22D853AA30F3E /* ZSSExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZSSExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE3911D519A2D8E1EEC25471E96388A8 /* ZSSExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZSSExtensions-prefix.pch"; sourceTree = "<group>"; };
 		FFC4E93B5FDACDFC5CE7F75EE3714A38 /* DeviceConstantsLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceConstantsLayoutConstraint.swift; path = ZSSExtensions/Classes/DeviceConstantsLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,7 +219,6 @@
 				DC962BC9E11CC4CB3AA3721CF42037EF /* LoginButton.swift */,
 				85AADAA982A7C61537B5D9DA2FD93EAB /* NotificationView.swift */,
 			);
-			name = ChildViews;
 			path = ChildViews;
 			sourceTree = "<group>";
 		};
@@ -304,6 +305,7 @@
 				CA830926B9FC8E473E97E380A5E88392 /* UITableView+Extensions.swift */,
 				2887ECE9C48F0B694300B69D641C99D0 /* UITextField+Extensions.swift */,
 				4412328AB8D7717CA727C9B9BEA08020 /* UIViewController+Extensions.swift */,
+				4AF2A4322795DBF200818F2F /* PowerButton.swift */,
 				1A249563DB89F4D4553819DA364A74C9 /* Pod */,
 				A45414982666BCD32F399AF3F1469FEE /* StandardViews */,
 				CC6225A15379B112A6A4E664BC916FCC /* Support Files */,
@@ -346,7 +348,6 @@
 				479FDC8A3863DC0B938FD5660860C9D2 /* Device.generated.swift */,
 				8832829C06B73FCE09DFAD2C41A2F047 /* Support Files */,
 			);
-			name = DeviceKit;
 			path = DeviceKit;
 			sourceTree = "<group>";
 		};
@@ -523,6 +524,7 @@
 				85B3E2523DB7D8C4A0550110F2CC14F2 /* UINib+Extensions.swift in Sources */,
 				87A0B81EE03473228A28CB406FC29241 /* UITableView+Extensions.swift in Sources */,
 				8B9CFC6A21E2C4D11D13F3091731C35C /* UITextField+Extensions.swift in Sources */,
+				4AF2A4332795DBF200818F2F /* PowerButton.swift in Sources */,
 				CA30D594AFE4D760BA75152C53537A93 /* UIViewController+Extensions.swift in Sources */,
 				95248E3AB3E7B6F17B439CC48544D1C3 /* ZSSExtensions-dummy.m in Sources */,
 			);
@@ -822,8 +824,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
