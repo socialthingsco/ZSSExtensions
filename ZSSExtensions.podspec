@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZSSExtensions'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = 'Extensions and commonly used pieces of code to share across various projects.'
 
 # This description is used to generate tags and improve search results.
