@@ -7,76 +7,76 @@
 
 import UIKit
 
-class PowerButton: UIButton {
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+public class PowerButton: UIButton {
+    @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
 
-    @IBInspectable var borderColor: UIColor? = nil {
+    @IBInspectable public var borderColor: UIColor? = nil {
         didSet {
             layer.borderColor = borderColor?.cgColor
         }
     }
 
-    @IBInspectable var borderWidth: CGFloat = 0.0 {
+    @IBInspectable public var borderWidth: CGFloat = 0.0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
 
-    @IBInspectable var shadowColor: UIColor? {
+    @IBInspectable public var shadowColor: UIColor? {
         didSet {
             layer.shadowColor = shadowColor?.cgColor
         }
     }
 
-    @IBInspectable var shadowOffset: CGSize = .zero {
+    @IBInspectable public var shadowOffset: CGSize = .zero {
         didSet {
             layer.shadowOffset = shadowOffset
         }
     }
 
-    @IBInspectable var shadowRadius: CGFloat = 0.0 {
+    @IBInspectable public var shadowRadius: CGFloat = 0.0 {
         didSet {
             layer.shadowRadius = shadowRadius
         }
     }
 
-    @IBInspectable var shadowOpacity: Float = 0.0 {
+    @IBInspectable public var shadowOpacity: Float = 0.0 {
         didSet {
             layer.shadowOpacity = shadowOpacity
         }
     }
-    @IBInspectable var loadable: Bool = false
+    @IBInspectable public var loadable: Bool = false
     
     private var activityIndicator: UIActivityIndicatorView?
     private var temporaryTitle: String?
     private var temporaryAttributedTitle: NSAttributedString?
     private var temporaryImage: UIImage?
-    var greedyTouches = true
+    public var greedyTouches = true
     private var isLoading: Bool = false
     private var didTriggerStopLoading = false
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
     
-    override var tintColor: UIColor! {
+    override public var tintColor: UIColor! {
         didSet {
             titleLabel?.textColor = tintColor
             activityIndicator?.color = tintColor
         }
     }
     
-    func setup() {
+    public func setup() {
         translatesAutoresizingMaskIntoConstraints = false
         addTarget(self, action: #selector(touchDown), for: .touchDown)
         addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
@@ -156,7 +156,7 @@ class PowerButton: UIButton {
         UIImpactFeedbackGenerator(style: .light).impactOccurred(intensity: 0.9)
     }
     
-    func startLoading() {
+    public func startLoading() {
         didTriggerStopLoading = false
         isLoading = true
         isEnabled = false
@@ -184,7 +184,7 @@ class PowerButton: UIButton {
         self.activityIndicator = activityIndicator
     }
     
-    func stopLoading() {
+    public func stopLoading() {
         didTriggerStopLoading = true
         isEnabled = true
         if let temporaryTitle = temporaryTitle {

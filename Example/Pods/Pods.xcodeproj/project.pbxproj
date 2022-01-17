@@ -15,7 +15,7 @@
 		21BD78F9DB9EA8FE167E4A9149CFCBA3 /* Pods-ZSSExtensions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5419D2B9AF2CEDE9A2569AEF6215C854 /* Pods-ZSSExtensions_Tests-dummy.m */; };
 		44FDC841C20165E2DE68E31737A401DC /* DeviceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3999B5917D2FE6E6B28DF178B6E1965 /* DeviceKit-dummy.m */; };
 		45294DD3646C1F7723E940B54CF084CD /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8F60C9408BAF6A95A60B766542991 /* NSDate+Extensions.swift */; };
-		4AF2A4332795DBF200818F2F /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2A4322795DBF200818F2F /* PowerButton.swift */; };
+		4A09CA9527961F90009B6628 /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09CA9427961F90009B6628 /* PowerButton.swift */; };
 		4E9D706FF89862295EE055CCD0C72705 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C619C4E4C9B98F54DC66E04989228B97 /* UIDevice+Extensions.swift */; };
 		5BFC68C16CD61B0917D1760327171D79 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0299318DFE0AF8A9DBD98E3856FD61B /* Constraint.swift */; };
 		64C94E678B127F603DF67FE95A8D0273 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -95,7 +95,7 @@
 		498A370A9431E2ECBE0A1F847A050905 /* StandardImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardImageView.swift; sourceTree = "<group>"; };
 		49AC3E1DEF384EB96E0A2A568D96E819 /* DeviceConstantLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceConstantLabel.swift; sourceTree = "<group>"; };
 		49AC80F5DA1731231E6B37F2DA61C50F /* Pods-ZSSExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZSSExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4AF2A4322795DBF200818F2F /* PowerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
+		4A09CA9427961F90009B6628 /* PowerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PowerButton.swift; path = ZSSExtensions/Classes/PowerButton.swift; sourceTree = "<group>"; };
 		5419D2B9AF2CEDE9A2569AEF6215C854 /* Pods-ZSSExtensions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZSSExtensions_Tests-dummy.m"; sourceTree = "<group>"; };
 		69C62C6D84347018CF40935F289CBBA3 /* StandardButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		69F2371D66D76585BB50E9A1302569F0 /* UINib+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+Extensions.swift"; path = "ZSSExtensions/Classes/UINib+Extensions.swift"; sourceTree = "<group>"; };
@@ -303,9 +303,9 @@
 				AE2651A4198419E1CF90F9709DBBE23E /* UINavigationController+Extensions.swift */,
 				69F2371D66D76585BB50E9A1302569F0 /* UINib+Extensions.swift */,
 				CA830926B9FC8E473E97E380A5E88392 /* UITableView+Extensions.swift */,
+				4A09CA9427961F90009B6628 /* PowerButton.swift */,
 				2887ECE9C48F0B694300B69D641C99D0 /* UITextField+Extensions.swift */,
 				4412328AB8D7717CA727C9B9BEA08020 /* UIViewController+Extensions.swift */,
-				4AF2A4322795DBF200818F2F /* PowerButton.swift */,
 				1A249563DB89F4D4553819DA364A74C9 /* Pod */,
 				A45414982666BCD32F399AF3F1469FEE /* StandardViews */,
 				CC6225A15379B112A6A4E664BC916FCC /* Support Files */,
@@ -524,7 +524,7 @@
 				85B3E2523DB7D8C4A0550110F2CC14F2 /* UINib+Extensions.swift in Sources */,
 				87A0B81EE03473228A28CB406FC29241 /* UITableView+Extensions.swift in Sources */,
 				8B9CFC6A21E2C4D11D13F3091731C35C /* UITextField+Extensions.swift in Sources */,
-				4AF2A4332795DBF200818F2F /* PowerButton.swift in Sources */,
+				4A09CA9527961F90009B6628 /* PowerButton.swift in Sources */,
 				CA30D594AFE4D760BA75152C53537A93 /* UIViewController+Extensions.swift in Sources */,
 				95248E3AB3E7B6F17B439CC48544D1C3 /* ZSSExtensions-dummy.m in Sources */,
 			);
